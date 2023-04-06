@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ namespace Deadline
 {
     public partial class Form1 : Form
     {
+        public static string connectionString = @"Data Source=MSI;Initial Catalog=FPT;Integrated Security=True";
         public Form1()
         {
             InitializeComponent();
@@ -38,6 +40,48 @@ namespace Deadline
             chartGroup.Series["Groups"].Points.AddXY(" 4", 100);
             chartGroup.Series["Groups"].Points.AddXY(" 5", 1200);
             chartGroup.Series["Groups"].Points.AddXY(" 6", 1100);
+        }
+        void uploadDataGridView()
+        {
+            dataGridView1.DataSource = getDataGridView1().Tables[0];
+            dataGridView2.DataSource = getDataGridView2().Tables[0];
+        }
+        DataSet getDataGridView1()
+        {
+            DataSet data = new DataSet();
+
+            string query = "SELECT * FROM TAICHINH";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
+                adapter.Fill(data);
+
+                connection.Close();
+            }
+            return data;
+        }
+        DataSet getDataGridView2()
+        {
+            DataSet data = new DataSet();
+
+            string query = "SELECT * FROM KHACHHANG";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
+                adapter.Fill(data);
+
+                connection.Close();
+            }
+            return data;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            uploadDataGridView();
         }
     }
 }
