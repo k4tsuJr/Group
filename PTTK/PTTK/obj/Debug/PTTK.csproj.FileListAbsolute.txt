@@ -1,0 +1,13 @@
+E:\C#\PTTK\PTTK\bin\Debug\PTTK.exe.config
+E:\C#\PTTK\PTTK\bin\Debug\PTTK.exe
+E:\C#\PTTK\PTTK\bin\Debug\PTTK.pdb
+E:\C#\PTTK\PTTK\bin\Debug\Guna.UI2.dll
+E:\C#\PTTK\PTTK\obj\Debug\PTTK.csproj.AssemblyReference.cache
+E:\C#\PTTK\PTTK\obj\Debug\PTTK.csproj.SuggestedBindingRedirects.cache
+E:\C#\PTTK\PTTK\obj\Debug\PTTK.Form1.resources
+E:\C#\PTTK\PTTK\obj\Debug\PTTK.Properties.Resources.resources
+E:\C#\PTTK\PTTK\obj\Debug\PTTK.csproj.GenerateResource.cache
+E:\C#\PTTK\PTTK\obj\Debug\PTTK.csproj.CoreCompileInputs.cache
+E:\C#\PTTK\PTTK\obj\Debug\PTTK.csproj.CopyComplete
+E:\C#\PTTK\PTTK\obj\Debug\PTTK.exe
+E:\C#\PTTK\PTTK\obj\Debug\PTTK.pdb
